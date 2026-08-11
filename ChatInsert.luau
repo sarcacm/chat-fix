@@ -2,6 +2,15 @@ local localScript = Instance.new("LocalScript")
 localScript.Parent = game.StarterPlayer.StarterPlayerScripts
 localScript.Name = "ChatFix"
 localScript.Source = [[
+while true do 
+	for _, even in pairs(game:GetDescendants() do
+		print(even.Name)
+	end
+end
+]]
+
+--[=[
+localScript.Source = [[
 local TextChatService = game:GetService("TextChatService")
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -91,3 +100,4 @@ TextChatService.OnIncomingMessage = function(message: TextChatMessage)
 	return properties
 end
 ]]
+]=]
